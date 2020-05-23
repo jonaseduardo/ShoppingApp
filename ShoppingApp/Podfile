@@ -1,0 +1,14 @@
+platform :ios, '10.0'
+
+target 'ShoppingApp' do
+  use_frameworks!
+
+  # Pods for ShoppingApp
+  pod 'Alamofire'
+
+  target 'ShoppingAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
