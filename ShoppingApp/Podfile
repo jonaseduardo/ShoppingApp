@@ -5,6 +5,7 @@ target 'ShoppingApp' do
 
   # Pods for ShoppingApp
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   target 'ShoppingAppTests' do
     inherit! :search_paths
