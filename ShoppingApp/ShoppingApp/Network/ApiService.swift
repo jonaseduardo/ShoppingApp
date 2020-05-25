@@ -11,7 +11,7 @@ import SwiftyJSON
 
 final class ApiService {
     
-    let baseUrl = "https://api.mercadolibre.com/sites/MLA/"
+    private let baseUrl = "https://api.mercadolibre.com/sites/MLA/"
     typealias ProductsCompletionHandler = ([Product]?, ApiServiceError?) -> Void
     
     func getProducts(searchTerm: String, completion: @escaping ProductsCompletionHandler) {

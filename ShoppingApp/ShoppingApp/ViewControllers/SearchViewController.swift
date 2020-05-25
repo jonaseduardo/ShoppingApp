@@ -15,8 +15,8 @@ final class SearchViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    let viewModel = SearchViewModel()
-    let searchBar = UISearchBar() // Se crea programaticamente para poder ponerlo en el navigation Bar
+    private let viewModel = SearchViewModel()
+    private let searchBar = UISearchBar() // Se crea programaticamente para poder ponerlo en el navigation Bar
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,7 +10,7 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    let searchBar = UISearchBar() // Este UISearchBar solo servirá como disparador para mostrar SearchViewController que es donde se hará la busqueda
+    private let searchBar = UISearchBar() // Este UISearchBar solo servirá como disparador para mostrar SearchViewController que es donde se hará la busqueda
 
     override func viewDidLoad() {
         super.viewDidLoad()
