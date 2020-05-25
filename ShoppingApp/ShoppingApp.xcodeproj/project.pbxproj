@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37D6B783135CBFF1B7D45BED /* Pods_ShoppingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0420CF33BAA1948C07917F34 /* Pods_ShoppingAppTests.framework */; };
 		68593FD42479935A00F45FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68593FD32479935A00F45FA3 /* AppDelegate.swift */; };
 		68593FD62479935A00F45FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68593FD52479935A00F45FA3 /* SceneDelegate.swift */; };
 		68593FDB2479935A00F45FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68593FD92479935A00F45FA3 /* Main.storyboard */; };
 		68593FDD2479935D00F45FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68593FDC2479935D00F45FA3 /* Assets.xcassets */; };
 		68593FE02479935D00F45FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68593FDE2479935D00F45FA3 /* LaunchScreen.storyboard */; };
-		68593FEB2479935D00F45FA3 /* ShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68593FEA2479935D00F45FA3 /* ShoppingAppTests.swift */; };
 		685940012479A41A00F45FA3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685940002479A41A00F45FA3 /* SearchViewController.swift */; };
 		685940052479A52E00F45FA3 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685940042479A52E00F45FA3 /* ProductDetailViewController.swift */; };
 		685940072479A6D200F45FA3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685940062479A6D200F45FA3 /* SearchViewModel.swift */; };
@@ -27,16 +25,6 @@
 		C50C5945C293AC94E3CF0ABD /* Pods_ShoppingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19BCC4A0A41564731A5CFE2 /* Pods_ShoppingApp.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		68593FE72479935D00F45FA3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68593FC82479935A00F45FA3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68593FCF2479935A00F45FA3;
-			remoteInfo = ShoppingApp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0420CF33BAA1948C07917F34 /* Pods_ShoppingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CA204F46C3E8DEBA5A0613 /* Pods-ShoppingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShoppingAppTests/Pods-ShoppingAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,9 +35,6 @@
 		68593FDC2479935D00F45FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68593FDF2479935D00F45FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68593FE12479935D00F45FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68593FE62479935D00F45FA3 /* ShoppingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68593FEA2479935D00F45FA3 /* ShoppingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppTests.swift; sourceTree = "<group>"; };
-		68593FEC2479935D00F45FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		685940002479A41A00F45FA3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		685940042479A52E00F45FA3 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		685940062479A6D200F45FA3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -75,14 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68593FE32479935D00F45FA3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37D6B783135CBFF1B7D45BED /* Pods_ShoppingAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				68593FD22479935A00F45FA3 /* ShoppingApp */,
-				68593FE92479935D00F45FA3 /* ShoppingAppTests */,
 				68593FD12479935A00F45FA3 /* Products */,
 				BDDEB79A1AD0823B809B37A8 /* Pods */,
 				5801758570E2E3CA24F0064C /* Frameworks */,
@@ -110,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				68593FD02479935A00F45FA3 /* ShoppingApp.app */,
-				68593FE62479935D00F45FA3 /* ShoppingAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,15 +104,6 @@
 				68593FFB2479A26C00F45FA3 /* Supporting Files */,
 			);
 			path = ShoppingApp;
-			sourceTree = "<group>";
-		};
-		68593FE92479935D00F45FA3 /* ShoppingAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				68593FEA2479935D00F45FA3 /* ShoppingAppTests.swift */,
-				68593FEC2479935D00F45FA3 /* Info.plist */,
-			);
-			path = ShoppingAppTests;
 			sourceTree = "<group>";
 		};
 		68593FF52479A10500F45FA3 /* ViewControllers */ = {
@@ -268,25 +234,6 @@
 			productReference = 68593FD02479935A00F45FA3 /* ShoppingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		68593FE52479935D00F45FA3 /* ShoppingAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68593FF22479935D00F45FA3 /* Build configuration list for PBXNativeTarget "ShoppingAppTests" */;
-			buildPhases = (
-				AD873698B308537A50AF2E3D /* [CP] Check Pods Manifest.lock */,
-				68593FE22479935D00F45FA3 /* Sources */,
-				68593FE32479935D00F45FA3 /* Frameworks */,
-				68593FE42479935D00F45FA3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68593FE82479935D00F45FA3 /* PBXTargetDependency */,
-			);
-			name = ShoppingAppTests;
-			productName = ShoppingAppTests;
-			productReference = 68593FE62479935D00F45FA3 /* ShoppingAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,10 +246,6 @@
 				TargetAttributes = {
 					68593FCF2479935A00F45FA3 = {
 						CreatedOnToolsVersion = 11.5;
-					};
-					68593FE52479935D00F45FA3 = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 68593FCF2479935A00F45FA3;
 					};
 				};
 			};
@@ -320,7 +263,6 @@
 			projectRoot = "";
 			targets = (
 				68593FCF2479935A00F45FA3 /* ShoppingApp */,
-				68593FE52479935D00F45FA3 /* ShoppingAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,13 +275,6 @@
 				68593FE02479935D00F45FA3 /* LaunchScreen.storyboard in Resources */,
 				68593FDD2479935D00F45FA3 /* Assets.xcassets in Resources */,
 				68593FDB2479935A00F45FA3 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68593FE42479935D00F45FA3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,28 +296,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD873698B308537A50AF2E3D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ShoppingAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7D16A5BF2B265D59EBE7A3A /* [CP] Check Pods Manifest.lock */ = {
@@ -429,23 +342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68593FE22479935D00F45FA3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68593FEB2479935D00F45FA3 /* ShoppingAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		68593FE82479935D00F45FA3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68593FCF2479935A00F45FA3 /* ShoppingApp */;
-			targetProxy = 68593FE72479935D00F45FA3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		68593FD92479935A00F45FA3 /* Main.storyboard */ = {
@@ -621,50 +518,6 @@
 			};
 			name = Release;
 		};
-		68593FF32479935D00F45FA3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDB95537A181682F6E16FEBD /* Pods-ShoppingAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShoppingAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jgarcia.ShoppingAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShoppingApp.app/ShoppingApp";
-			};
-			name = Debug;
-		};
-		68593FF42479935D00F45FA3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35CA204F46C3E8DEBA5A0613 /* Pods-ShoppingAppTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ShoppingAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jgarcia.ShoppingAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShoppingApp.app/ShoppingApp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -682,15 +535,6 @@
 			buildConfigurations = (
 				68593FF02479935D00F45FA3 /* Debug */,
 				68593FF12479935D00F45FA3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		68593FF22479935D00F45FA3 /* Build configuration list for PBXNativeTarget "ShoppingAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68593FF32479935D00F45FA3 /* Debug */,
-				68593FF42479935D00F45FA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
