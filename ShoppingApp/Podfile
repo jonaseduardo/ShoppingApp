@@ -5,6 +5,7 @@ target 'ShoppingApp' do
 
   # Pods for ShoppingApp
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'SwiftyJSON'
 
   target 'ShoppingAppTests' do

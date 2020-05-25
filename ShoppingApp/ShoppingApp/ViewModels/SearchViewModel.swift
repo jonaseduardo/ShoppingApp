@@ -8,7 +8,8 @@
 
 final class SearchViewModel {
     
-    var products = Bindable([Product]())
+    var products = Bindable([ProductViewModel]())
+    //var error: Bindable = Bindable(Error.self)
 
     func getProducts(searchTerm: String) {
         ApiService().getProducts(searchTerm: searchTerm) { products, error in
@@ -17,7 +18,13 @@ final class SearchViewModel {
                 return
             }
             
-            self.products.value = products ?? []
+            var productsVm: [ProductViewModel] = []
+            productsVm.append(contentsOf: products!.map({ (product) -> ProductViewModel in
+                let productVm = ProductViewModel(product: product)
+                return productVm
+            }))
+            
+            self.products.value = productsVm
         }
     }
     
@@ -25,7 +32,7 @@ final class SearchViewModel {
         return products.value.count
     }
 
-    func product(atIndex index: Int) -> Product {
+    func product(atIndex index: Int) -> ProductViewModel {
         return products.value[index]
     }
 

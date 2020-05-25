@@ -23,6 +23,7 @@
 		685940102479EF1A00F45FA3 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859400F2479EF1A00F45FA3 /* Bindable.swift */; };
 		685940122479FEB300F45FA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685940112479FEB300F45FA3 /* HomeViewController.swift */; };
 		68594015247B197600F45FA3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68594014247B197600F45FA3 /* Constants.swift */; };
+		68594017247B4C2D00F45FA3 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68594016247B4C2D00F45FA3 /* ProductViewModel.swift */; };
 		C50C5945C293AC94E3CF0ABD /* Pods_ShoppingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19BCC4A0A41564731A5CFE2 /* Pods_ShoppingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		6859400F2479EF1A00F45FA3 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		685940112479FEB300F45FA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		68594014247B197600F45FA3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		68594016247B4C2D00F45FA3 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		C0388E4C3484CD3A503635C8 /* Pods-ShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD54E3D7426CEB823E946A5E /* Pods-ShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.release.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
 		D19BCC4A0A41564731A5CFE2 /* Pods_ShoppingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,8 +153,9 @@
 		68593FF62479A11200F45FA3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				685940062479A6D200F45FA3 /* SearchViewModel.swift */,
 				6859400F2479EF1A00F45FA3 /* Bindable.swift */,
+				685940062479A6D200F45FA3 /* SearchViewModel.swift */,
+				68594016247B4C2D00F45FA3 /* ProductViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			files = (
 				685940102479EF1A00F45FA3 /* Bindable.swift in Sources */,
 				68594015247B197600F45FA3 /* Constants.swift in Sources */,
+				68594017247B4C2D00F45FA3 /* ProductViewModel.swift in Sources */,
 				6859400E2479EDA300F45FA3 /* SearchTableViewCell.swift in Sources */,
 				685940072479A6D200F45FA3 /* SearchViewModel.swift in Sources */,
 				6859400B2479BE7F00F45FA3 /* Product.swift in Sources */,

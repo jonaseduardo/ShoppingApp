@@ -18,7 +18,7 @@ final class ApiService {
         let url = baseUrl + "search"
         let parameters: [String : Any] = [
             "q" : searchTerm,
-            "limit" : "9"
+            "limit" : "20"
         ]
 
         AF.request(url, parameters: parameters).validate().responseJSON { response in
