@@ -16,7 +16,7 @@ final class SearchViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     let viewModel = SearchViewModel()
-    let searchBar = UISearchBar()
+    let searchBar = UISearchBar() // Se crea programaticamente para poder ponerlo en el navigation Bar
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,12 @@ final class SearchViewController: UIViewController {
         viewModel.products.bind { _ in
             self.tableView.reloadData()
         }
+        
+        viewModel.error.bind { error in
+            let str = error.errorDescription ?? ""
+            print(str)
+            // Acá sólo imprimo el error , no se me ocurrió que tipo de error mostrar en el buscador
+        }
     }
 }
 
@@ -73,7 +79,7 @@ extension SearchViewController: UITableViewDelegate {
         if let productDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
             productDetailViewController.product = viewModel.product(atIndex: indexPath.row)
             let viewControllers = self.navigationController?.viewControllers
-            self.navigationController?.setViewControllers([viewControllers![0], productDetailViewController], animated: true)
+            self.navigationController?.setViewControllers([viewControllers![0], productDetailViewController], animated: true) // Esto se hace para no pushear la pantalla actual del buscador
         }
     }
 }

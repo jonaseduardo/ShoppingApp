@@ -51,7 +51,7 @@ final class ProductDetailViewController: UIViewController {
             priceLabel.isHidden = true
         }
         
-        product?.loadImage()
+        product?.loadImage() // La logica de descargar la imagen se coloca en el viewModel
     }
     
     func bindViewModel() {

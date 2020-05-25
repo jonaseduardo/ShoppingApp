@@ -8,13 +8,13 @@
 
 final class SearchViewModel {
     
-    var products = Bindable([ProductViewModel]())
-    //var error: Bindable = Bindable(Error.self)
+    var products = Bindable([ProductViewModel]()) // Para hacer el binding se utiliza una clase Boxing
+    var error: Bindable = Bindable(ApiServiceError())
 
     func getProducts(searchTerm: String) {
         ApiService().getProducts(searchTerm: searchTerm) { products, error in
             if let error = error {
-                print(error.localizedDescription)
+                self.error.value = error
                 return
             }
             

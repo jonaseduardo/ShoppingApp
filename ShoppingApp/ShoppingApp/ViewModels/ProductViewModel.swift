@@ -35,7 +35,13 @@ final class ProductViewModel {
     
     var price: String {
         guard let price = product?.price else { return "" }
-        return "$ " + String(price)
+        
+        let formater = NumberFormatter()
+        formater.groupingSeparator = "."
+        formater.numberStyle = .decimal
+        guard let priceStr = formater.string(from: NSNumber.init(value: price)) else { return "" }
+        
+        return "$ " + priceStr
     }
     
     var condition: String {
@@ -47,10 +53,6 @@ final class ProductViewModel {
     var soldQuantity: String {
         guard let soldQuantity = product?.soldQuantity else { return "" }
         return String(soldQuantity) + " Vendidos"
-    }
-    
-    var urlImage: String {
-        return product?.thumbnail ?? ""
     }
 }
 

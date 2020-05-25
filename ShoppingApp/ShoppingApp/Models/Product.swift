@@ -16,8 +16,8 @@ final class Product {
     var condition: String
     var soldQuantity: Int
     var thumbnail: String
-    var addressStateName: String
     
+    // El parseo lo hice a mano porque solo iba a necesitar pocos campos 
     init(_ dictionary: JSON) {
         id = dictionary["id"].string ?? ""
         title = dictionary["title"].string ?? ""
@@ -25,6 +25,5 @@ final class Product {
         condition = dictionary["condition"].string ?? ""
         soldQuantity = dictionary["sold_quantity"].int ?? 0
         thumbnail = dictionary["thumbnail"].string ?? ""
-        addressStateName = dictionary["address"]["state_name"].string ?? ""
     }
 }
