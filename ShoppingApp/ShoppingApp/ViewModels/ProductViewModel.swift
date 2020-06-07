@@ -56,9 +56,9 @@ final class ProductViewModel {
     }
 }
 
-enum Condition: String {
-    case new = "new"
-    case used = "used"
+private enum Condition: String {
+    case new
+    case used
     
     var name: String {
         switch self {

@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import SwiftyJSON
 
 final class ApiService {
     
@@ -21,17 +20,19 @@ final class ApiService {
             "limit" : "20" // Lo límite a 20 por poner una cantidad
         ]
 
-        AF.request(url, parameters: parameters).validate().responseJSON { response in
+        AF.request(url, parameters: parameters).validate().responseData { response in
             switch response.result {
             case .success(let value):
-                let results = JSON(value)["results"]
+                do {
+                    let decoder = JSONDecoder()
+                    let result =  try decoder.decode(Products.self, from: value)
+                    completion(result.products, nil)
+                    dump(result)
+                } catch let error {
+                    print(error.localizedDescription)
+                    completion([], nil)
+                }
                 
-                var products: [Product] = []
-                products.append(contentsOf: results.map({ (result) -> Product in
-                    let product = Product(result.1)
-                    return product
-                }))
-                completion(products, nil)
             case .failure(let error):
                 let localizedError = ApiServiceError.makeError(error: error)
                 completion(nil, localizedError)
@@ -58,7 +59,7 @@ enum ApiServiceError: LocalizedError {
         return .serverError
     }
 
-    public var errorDescription: String? {
+    public var errorDescription: String {
         switch self {
         case .serverError:
             return "Ha ocurrido un error, por favor intente mas tarde"

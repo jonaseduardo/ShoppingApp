@@ -6,11 +6,5 @@ target 'ShoppingApp' do
   # Pods for ShoppingApp
   pod 'Alamofire'
   pod 'AlamofireImage'
-  pod 'SwiftyJSON'
-
-  target 'ShoppingAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end

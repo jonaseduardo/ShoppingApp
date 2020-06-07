@@ -6,24 +6,24 @@
 //  Copyright © 2020 Jonathan Garcia. All rights reserved.
 //
 
-import SwiftyJSON
+struct Product: Codable {
+    var id: String?
+    var title: String?
+    var price: Double?
+    var condition: String?
+    var soldQuantity: Int?
+    var thumbnail: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, title, price, condition, thumbnail
+        case soldQuantity = "sold_quantity"
+    }
+}
 
-final class Product {
+struct Products: Codable {
+    var products: [Product]?
     
-    var id: String
-    var title: String
-    var price: Int
-    var condition: String
-    var soldQuantity: Int
-    var thumbnail: String
-    
-    // El parseo lo hice a mano porque solo iba a necesitar pocos campos 
-    init(_ dictionary: JSON) {
-        id = dictionary["id"].string ?? ""
-        title = dictionary["title"].string ?? ""
-        price = dictionary["price"].int ?? 0
-        condition = dictionary["condition"].string ?? ""
-        soldQuantity = dictionary["sold_quantity"].int ?? 0
-        thumbnail = dictionary["thumbnail"].string ?? ""
+    private enum CodingKeys: String, CodingKey {
+        case products = "results"
     }
 }
