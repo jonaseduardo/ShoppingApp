@@ -37,6 +37,7 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         if let searchViewController = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
+            searchViewController.configWith(viewModel: SearchViewModel())
             self.navigationController?.pushViewController(searchViewController, animated: true)
             searchBar.resignFirstResponder()
         }

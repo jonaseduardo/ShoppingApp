@@ -12,7 +12,7 @@ final class SearchTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var titleLabel: UILabel!
 
-    func configure(product: ProductViewModel) {
-        titleLabel.text = product.title
+    func configure(product: ProductViewModelProtocol?) {
+        titleLabel.text = product?.title
     }
 }

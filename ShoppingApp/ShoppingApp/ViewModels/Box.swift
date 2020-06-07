@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jonathan Garcia. All rights reserved.
 //
 
-class Bindable <T> {
+class Box <T> {
     
     typealias Listener = ((T) -> Void)
     var listener: Listener?

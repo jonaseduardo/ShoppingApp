@@ -15,7 +15,7 @@ final class SearchViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private let viewModel = SearchViewModel()
+    private var viewModel: SearchViewModelProtocol?
     private let searchBar = UISearchBar() // Se crea programaticamente para poder ponerlo en el navigation Bar
 
     override func viewDidLoad() {
@@ -24,6 +24,10 @@ final class SearchViewController: UIViewController {
         configViews()
         bindViewModel()
         configSearchBar()
+    }
+    
+    func configWith(viewModel: SearchViewModelProtocol) {
+        self.viewModel = viewModel
     }
 
     func configViews() {
@@ -44,11 +48,11 @@ final class SearchViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.products.bind { _ in
+        viewModel?.products.bind { _ in
             self.tableView.reloadData()
         }
         
-        viewModel.error.bind { error in
+        viewModel?.error.bind { error in
             let str = error.errorDescription ?? ""
             print(str)
             // Acá sólo imprimo el error , no se me ocurrió que tipo de error mostrar en el buscador
@@ -58,14 +62,14 @@ final class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.productsCount
+        return viewModel?.productsCount ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath) as? SearchTableViewCell else {
             fatalError("Could not dequeue SearchTableViewCell")
         }
-        cell.configure(product: viewModel.product(atIndex: indexPath.row))
+        cell.configure(product: viewModel?.product(atIndex: indexPath.row))
         return cell
     }
 }
@@ -77,7 +81,7 @@ extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let productDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
-            productDetailViewController.product = viewModel.product(atIndex: indexPath.row)
+            productDetailViewController.product = viewModel?.product(atIndex: indexPath.row)
             let viewControllers = self.navigationController?.viewControllers
             self.navigationController?.setViewControllers([viewControllers![0], productDetailViewController], animated: true) // Esto se hace para no pushear la pantalla actual del buscador
         }
@@ -86,7 +90,7 @@ extension SearchViewController: UITableViewDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.getProducts(searchTerm: searchText)
+        viewModel?.getProducts(searchTerm: searchText)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

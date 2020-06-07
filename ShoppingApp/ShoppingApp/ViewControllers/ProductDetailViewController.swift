@@ -16,7 +16,7 @@ final class ProductDetailViewController: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     
-    var product: ProductViewModel?
+    var product: ProductViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ final class ProductDetailViewController: UIViewController {
     }
     
     func bindViewModel() {
-        product?.productImage.bind { image in
+        product?.productImage?.bind { image in
             self.productImage.image = image
         }
     }

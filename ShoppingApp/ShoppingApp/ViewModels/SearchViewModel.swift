@@ -6,10 +6,19 @@
 //  Copyright © 2020 Jonathan Garcia. All rights reserved.
 //
 
-final class SearchViewModel {
+protocol SearchViewModelProtocol {
+    var products: Box<[ProductViewModelProtocol]> { get set }
+    var error: Box<ApiServiceError> { get set }
+    var productsCount: Int { get }
+    func getProducts(searchTerm: String)
     
-    var products = Bindable([ProductViewModel]()) // Para hacer el binding se utiliza una clase Boxing
-    var error: Bindable = Bindable(ApiServiceError())
+    func product(atIndex index: Int) -> ProductViewModelProtocol
+}
+
+final class SearchViewModel : SearchViewModelProtocol {
+    
+    var products = Box([ProductViewModelProtocol]()) // Para hacer el binding se utiliza una clase Boxing
+    var error: Box = Box(ApiServiceError())
 
     func getProducts(searchTerm: String) {
         ApiService().getProducts(searchTerm: searchTerm) { products, error in
@@ -18,8 +27,8 @@ final class SearchViewModel {
                 return
             }
             
-            var productsVm: [ProductViewModel] = []
-            productsVm.append(contentsOf: products!.map({ (product) -> ProductViewModel in
+            var productsVm: [ProductViewModelProtocol] = []
+            productsVm.append(contentsOf: products!.map({ (product) -> ProductViewModelProtocol in
                 let productVm = ProductViewModel(product: product)
                 return productVm
             }))
@@ -32,7 +41,7 @@ final class SearchViewModel {
         return products.value.count
     }
 
-    func product(atIndex index: Int) -> ProductViewModel {
+    func product(atIndex index: Int) -> ProductViewModelProtocol {
         return products.value[index]
     }
 

@@ -9,12 +9,25 @@
 import Alamofire
 import AlamofireImage
 
-final class ProductViewModel {
+protocol ProductViewModelProtocol {
+    var product: Product? { get set }
+    var productImage: Box<UIImage>? { get set }
+    var title: String { get }
+    var price: String { get }
+    var condition: String { get }
+    var soldQuantity: String { get }
+    
+    init(product: Product)
+    func loadImage()
+}
+
+final class ProductViewModel: ProductViewModelProtocol {
     
     var product: Product?
 
     init(product: Product) {
         self.product = product
+        self.productImage = Box(UIImage())
     }
     
     func loadImage() {
@@ -22,12 +35,12 @@ final class ProductViewModel {
         
         AF.request(url).responseImage { response in
             if case .success(let image) = response.result {
-                self.productImage.value = image
+                self.productImage?.value = image
             }
         }
     }
     
-    var productImage = Bindable(UIImage.init())
+    var productImage: Box<UIImage>?
     
     var title: String {
         return product?.title ?? ""
